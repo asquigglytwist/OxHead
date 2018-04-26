@@ -1,0 +1,1 @@
+I treat this repo as a playground / experimental ground for quickly trying out solutions or even explicit hacks.  Considering this purpose, I'm currently not expecting anyone to contribute to this project and would prefer to keep it the same all the way.
