@@ -11,14 +11,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test_AdvanceDataStructures"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{9B6CD560-A8AC-4E17-BE9E-4B88625AD45C}"
 	ProjectSection(SolutionItems) = preProject
-		Exercises.vsmdi = Exercises.vsmdi
 		Local.testsettings = Local.testsettings
+		OxHead.vsmdi = OxHead.vsmdi
 		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
 	EndProjectSection
 EndProject
 Global
 	GlobalSection(TestCaseManagementSettings) = postSolution
-		CategoryFile = Exercises.vsmdi
+		CategoryFile = OxHead.vsmdi
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
