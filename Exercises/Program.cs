@@ -9,6 +9,7 @@ namespace Exercises
     {
         static void Main(string[] args)
         {
+            Shikamaru.WeightedGraph.ShortestPath("a", "e");
         }
     }
 }
