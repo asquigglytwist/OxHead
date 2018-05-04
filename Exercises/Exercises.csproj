@@ -50,10 +50,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\AdvanceDataStructures\AdvanceDataStructures.csproj">
-      <Project>{A8943CA9-7171-4E03-95D5-78D07455971C}</Project>
-      <Name>AdvanceDataStructures</Name>
-    </ProjectReference>
     <ProjectReference Include="..\DataStructures\DataStructures.csproj">
       <Project>{83D16591-30BC-42F2-8EDE-9279ED6DF37F}</Project>
       <Name>DataStructures</Name>

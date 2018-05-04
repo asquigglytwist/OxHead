@@ -1,4 +1,4 @@
-﻿using AdvanceDataStructures;
+﻿using DataStructures;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 

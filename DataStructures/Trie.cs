@@ -4,7 +4,7 @@
 
 using System.Collections.Generic;
 
-namespace AdvanceDataStructures
+namespace DataStructures
 {
     public class Trie
     {
