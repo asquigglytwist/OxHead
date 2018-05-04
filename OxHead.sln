@@ -18,6 +18,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shikamaru", "Shikamaru\Shikamaru.csproj", "{2ABF0C98-F024-4BD1-9E26-6D7070496176}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -68,6 +70,18 @@ Global
 		{EEFC6F91-2E05-4E5D-8485-3DD3F009FC98}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{EEFC6F91-2E05-4E5D-8485-3DD3F009FC98}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{EEFC6F91-2E05-4E5D-8485-3DD3F009FC98}.Release|x86.ActiveCfg = Release|Any CPU
+		{2ABF0C98-F024-4BD1-9E26-6D7070496176}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2ABF0C98-F024-4BD1-9E26-6D7070496176}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2ABF0C98-F024-4BD1-9E26-6D7070496176}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{2ABF0C98-F024-4BD1-9E26-6D7070496176}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{2ABF0C98-F024-4BD1-9E26-6D7070496176}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{2ABF0C98-F024-4BD1-9E26-6D7070496176}.Debug|x86.Build.0 = Debug|Any CPU
+		{2ABF0C98-F024-4BD1-9E26-6D7070496176}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2ABF0C98-F024-4BD1-9E26-6D7070496176}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2ABF0C98-F024-4BD1-9E26-6D7070496176}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{2ABF0C98-F024-4BD1-9E26-6D7070496176}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{2ABF0C98-F024-4BD1-9E26-6D7070496176}.Release|x86.ActiveCfg = Release|Any CPU
+		{2ABF0C98-F024-4BD1-9E26-6D7070496176}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

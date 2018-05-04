@@ -9,7 +9,8 @@ namespace Exercises
     {
         static void Main(string[] args)
         {
-            Shikamaru.WeightedGraph.ShortestPath("a", "e");
+            //DataStructures.WeightedGraph.ShortestPath("a", "e");
+            Shikamaru.TSP.NaiveSolution(Shikamaru.TSP.CitiesList, "w");
         }
     }
 }

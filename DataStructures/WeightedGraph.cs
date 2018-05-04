@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Shikamaru
+namespace DataStructures
 {
     public static class WeightedGraph
     {
