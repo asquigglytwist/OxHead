@@ -10,7 +10,8 @@ namespace Exercises
         static void Main(string[] args)
         {
             //DataStructures.WeightedGraph.ShortestPath("a", "e");
-            Shikamaru.TSP.NaiveSolution("w");
+            //Shikamaru.TSP.NaiveSolution("w");
+            DataStructures.BinTree.PrintTree();
         }
     }
 }
