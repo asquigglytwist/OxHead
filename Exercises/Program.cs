@@ -11,7 +11,14 @@ namespace Exercises
         {
             //DataStructures.WeightedGraph.ShortestPath("a", "e");
             //Shikamaru.TSP.NaiveSolution("w");
-            DataStructures.BinTree.PrintTree();
+            Console.WriteLine(DataStructures.BinTree.IsValidBST());
+            GetChEx();
+        }
+
+        static void GetChEx()
+        {
+            Console.WriteLine("{0}Press any key to continue...", Environment.NewLine);
+            Console.ReadKey(true);
         }
     }
 }

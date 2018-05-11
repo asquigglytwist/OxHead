@@ -49,6 +49,28 @@ namespace DataStructures
             var temp = sbLinePerDepth[depth].ToString();
 #endif
         }
+
+        public static bool IsValidBST()
+        {
+            return IsValidBSTRecursive(Root, int.MinValue, int.MaxValue);
+        }
+
+        // [BIB]:  https://stackoverflow.com/questions/499995/how-do-you-validate-a-binary-search-tree
+        static bool IsValidBSTRecursive(BinTreeNode<int> node, int min, int max)
+        {
+            if (node== null)
+            {
+                return true;
+            }
+            if (node.Data > min && IsValidBSTRecursive(node.Left, min, node.Data) && IsValidBSTRecursive(node.Right, node.Data, max))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 
     public class BinTreeNode<T> where T : struct, IComparable, IFormattable, IConvertible
