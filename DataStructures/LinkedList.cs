@@ -14,6 +14,17 @@ namespace DataStructures
                     new LinkedListNode<int>(2,
                         new LinkedListNode<int>(3,
                             new LinkedListNode<int>(4))))));
+
+        public static void Test()
+        {
+            Console.WriteLine("IsCircular:  ", IsCircular());
+            Console.WriteLine("Before Reversing:");
+            Print();
+            Reverse();
+            Console.WriteLine("After Reversing:");
+            Print();
+        }
+
         static LinkedListNode<int> five = new LinkedListNode<int>(5),
             four = new LinkedListNode<int>(4, five),
             three = new LinkedListNode<int>(3, four),
@@ -43,6 +54,75 @@ namespace DataStructures
             }
             return false;
         }
+
+        public static void Print()
+        {
+            Console.WriteLine("Iterative:");
+            PrintHelperIterative(HeadNode);
+            Console.WriteLine();
+            Console.WriteLine("Recursive:");
+            PrintHelperRecursive(HeadNode2);
+            Console.WriteLine();
+        }
+
+        static void PrintHelperIterative(LinkedListNode<int> headNode)
+        {
+            var node = headNode;
+            while (node != null)
+            {
+                Console.Write("{0} -> ", node.Data);
+                node = node.Next;
+            }
+        }
+
+        static void PrintHelperRecursive(LinkedListNode<int> node)
+        {
+            if (node != null)
+            {
+                Console.Write("{0} -> ", node.Data);
+                if (node.Next != HeadNode && node.Next != HeadNode2)
+                {
+                    PrintHelperRecursive(node.Next);
+                }
+            }
+        }
+
+        static void Reverse()
+        {
+            ReverseHelperIterative(HeadNode);
+            five.Next = null;
+            HeadNode2 = ReverseHelperRecursive(HeadNode2);
+        }
+
+        static void ReverseHelperIterative(LinkedListNode<int> headNode)
+        {
+            LinkedListNode<int> currNode = headNode, prevNode = null, nextNode = null;
+            while (currNode != null)
+            {
+                nextNode = currNode.Next;
+                currNode.Next = prevNode;
+                prevNode = currNode;
+                currNode = nextNode;
+            }
+            HeadNode = prevNode;
+        }
+
+        // [BIB]:  https://stackoverflow.com/questions/14080758/reversing-a-linkedlist-recursively-in-c
+        static LinkedListNode<int> ReverseHelperRecursive(LinkedListNode<int> node)
+        {
+            if (node == null)
+            {
+                return null;
+            }
+            if (node.Next == null || node.Next == HeadNode || node.Next == HeadNode2)
+            {
+                return node;
+            }
+            var rest = ReverseHelperRecursive(node.Next);
+            node.Next.Next = node;
+            node.Next = null;
+            return rest;
+        }
     }
 
     public class LinkedListNode<T> where T : struct, IComparable, IFormattable, IConvertible
@@ -56,6 +136,11 @@ namespace DataStructures
         {
             Data = data;
             Next = next;
+        }
+
+        public override string ToString()
+        {
+            return Data.ToString();
         }
     }
 }
