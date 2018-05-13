@@ -16,10 +16,10 @@ namespace DataStructures
         public static void Test()
         {
             Console.WriteLine("IsValidBST: {0}", IsValidBST());
-            Travere(TraversalMethods.BFSLevelOrder);
-            Travere(TraversalMethods.DFSInOrder);
-            Travere(TraversalMethods.DFSPreOrder);
-            Travere(TraversalMethods.DFSPostOrder);
+            Traverse(TraversalMethods.BFSLevelOrder);
+            Traverse(TraversalMethods.DFSInOrder);
+            Traverse(TraversalMethods.DFSPreOrder);
+            Traverse(TraversalMethods.DFSPostOrder);
         }
 
         static BinTreeNode<int> rightSubTree = new BinTreeNode<int>(15,
@@ -82,7 +82,8 @@ namespace DataStructures
             }
         }
 
-        public static void Travere(TraversalMethods traversalMethod)
+        // [BIB]:  https://www.geeksforgeeks.org/bfs-vs-dfs-binary-tree/
+        public static void Traverse(TraversalMethods traversalMethod)
         {
             Console.WriteLine(traversalMethod.ToString());
             switch (traversalMethod)
