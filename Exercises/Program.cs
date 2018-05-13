@@ -11,9 +11,9 @@ namespace Exercises
         {
             //DataStructures.WeightedGraph.ShortestPath("a", "e");
             //Shikamaru.TSP.NaiveSolution("w");
-            //Console.WriteLine(DataStructures.BinTree.IsValidBST());
+            DataStructures.BinTree.Test();
             //Console.WriteLine(DataStructures.LinkedList.IsCircular());
-            DataStructures.LinkedList.Test();
+            //DataStructures.LinkedList.Test();
             GetChEx();
         }
 

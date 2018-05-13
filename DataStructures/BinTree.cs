@@ -12,6 +12,16 @@ namespace DataStructures
                 new BinTreeNode<int>(5),
                 new BinTreeNode<int>(9,
                     new BinTreeNode<int>(8)));
+
+        public static void Test()
+        {
+            Console.WriteLine("IsValidBST: {0}", IsValidBST());
+            Travere(TraversalMethods.BFSLevelOrder);
+            Travere(TraversalMethods.DFSInOrder);
+            Travere(TraversalMethods.DFSPreOrder);
+            Travere(TraversalMethods.DFSPostOrder);
+        }
+
         static BinTreeNode<int> rightSubTree = new BinTreeNode<int>(15,
                 new BinTreeNode<int>(11),
                 new BinTreeNode<int>(29,
@@ -71,6 +81,79 @@ namespace DataStructures
                 return false;
             }
         }
+
+        public static void Travere(TraversalMethods traversalMethod)
+        {
+            Console.WriteLine(traversalMethod.ToString());
+            switch (traversalMethod)
+            {
+                case TraversalMethods.BFSLevelOrder:
+                    TraverseBFSLevelOrder();
+                    break;
+                case TraversalMethods.DFSInOrder:
+                    TraverseDFSInOrder(Root);
+                    break;
+                case TraversalMethods.DFSPreOrder:
+                    TraverseDFSPreOrder(Root);
+                    break;
+                case TraversalMethods.DFSPostOrder:
+                    TraverseDFSPostOrder(Root);
+                    break;
+                default:
+                    break;
+            }
+            Console.WriteLine();
+        }
+
+        private static void TraverseBFSLevelOrder()
+        {
+            var nodesToVisit = new Queue<BinTreeNode<int>>();
+            nodesToVisit.Enqueue(Root);
+            while (nodesToVisit.Count > 0)
+            {
+                var temp = nodesToVisit.Dequeue();
+                if (temp == null)
+                {
+                    continue;
+                }
+                nodesToVisit.Enqueue(temp.Left);
+                nodesToVisit.Enqueue(temp.Right);
+                Console.Write(temp.DataAsPrintableString());
+            }
+        }
+
+        private static void TraverseDFSInOrder(BinTreeNode<int> node)
+        {
+            if (node == null)
+            {
+                return;
+            }
+            TraverseDFSInOrder(node.Left);
+            Console.Write(node.DataAsPrintableString());
+            TraverseDFSInOrder(node.Right);
+        }
+
+        private static void TraverseDFSPreOrder(BinTreeNode<int> node)
+        {
+            if (node == null)
+            {
+                return;
+            }
+            Console.Write(node.DataAsPrintableString());
+            TraverseDFSPreOrder(node.Left);
+            TraverseDFSPreOrder(node.Right);
+        }
+
+        private static void TraverseDFSPostOrder(BinTreeNode<int> node)
+        {
+            if (node == null)
+            {
+                return;
+            }
+            TraverseDFSPostOrder(node.Left);
+            TraverseDFSPostOrder(node.Right);
+            Console.Write(node.DataAsPrintableString());
+        }
     }
 
     public class BinTreeNode<T> where T : struct, IComparable, IFormattable, IConvertible
@@ -93,5 +176,18 @@ namespace DataStructures
         {
             return Data.ToString();
         }
+
+        public string DataAsPrintableString()
+        {
+            return string.Format("{0}, ", Data);
+        }
+    }
+
+    public enum TraversalMethods
+    {
+        BFSLevelOrder,
+        DFSInOrder,
+        DFSPreOrder,
+        DFSPostOrder
     }
 }
